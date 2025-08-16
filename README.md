@@ -85,6 +85,10 @@ with open("scaler.pkl","wb") as f:
 - Metrics reported in the notebook for the stacked model: Accuracy 95%, Precision 97%, Recall 91%, F1 94%.
 - `CustomerPurchase.html` is an export of the notebook for quick viewing without Jupyter.
 
+## Demo
+![Streamlit Demo](screenshot.png)
+
+
 ## Nice‑to‑have next
 - FastAPI endpoint for REST inference
 - Dockerfile + CI
