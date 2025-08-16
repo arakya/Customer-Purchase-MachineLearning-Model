@@ -3,6 +3,18 @@ import numpy as np
 import pickle
 from pathlib import Path
 
+BASE = Path(__file__).parent
+
+@st.cache_resource
+def load_artifacts():
+    with open(BASE / "stacked_model.pkl", "rb") as f:
+        model = pickle.load(f)
+    with open(BASE / "scaler.pkl", "rb") as f:
+        scaler = pickle.load(f)
+    return model, scaler
+
+model, scaler = load_artifacts()
+
 # -------------------------
 # Page config + lightweight theming
 # -------------------------
